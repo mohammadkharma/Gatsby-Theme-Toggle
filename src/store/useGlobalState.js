@@ -3,7 +3,9 @@ import { useReducer } from "react"
 const reducer = (state, action) => {
   switch (action.type) {
     case "TOGGLE_DARK_MODE":
-      return {}
+      return {
+        isDark: !state.isDark,
+      }
     default: {
       return state
     }
