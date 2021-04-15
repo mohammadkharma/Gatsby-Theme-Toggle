@@ -7,7 +7,7 @@ import { theme } from "../theme/theme"
 const Layout = ({ children }) => {
   const { state } = useContext(Context)
 
-  const the = useTheme()
+  const theme = useTheme()
 
   return (
     <div>
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           }
 
           body {
-            background-color: ${stte.isDark
+            background-color: ${state.isDark
               ? theme.dark.background
               : theme.light.background};
           }
@@ -31,3 +31,5 @@ const Layout = ({ children }) => {
     </div>
   )
 }
+
+export default Layout
